@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
@@ -6,15 +5,7 @@ import About from './components/About';
 import AlertComp from './components/AlertComp';
 import { useState } from 'react';
 
-
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-
 
 function App() {
 
@@ -43,18 +34,10 @@ function App() {
 
   return (
     <>
-    <Router>
       <Navbar title="TextUtils" toggleMode={toggleModeFunction} />
       <AlertComp title={title} />
-      <Switch>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/">
         <TextForm title="Enter your text here" />
-        </Route>
-      </Switch>
-      </Router>
+        <About />  
     </>
   );
 }
